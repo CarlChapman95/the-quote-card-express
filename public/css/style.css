@@ -1,3 +1,29 @@
 body {
     background-image: url("images/Yoda-Retina_2a7ecc26.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+.quote-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    
+}
+.quote-text {
+    font-size: 5rem;
+    font-style: italic;
+    color:antiquewhite;
+}
+.author-text {
+    flex-basis: 100%;
+    font-size: 3rem;
+    font-style: bold;
+    color:antiquewhite;
 }
