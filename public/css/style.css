@@ -1,32 +1,19 @@
-body {
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
 }
-.quote-container {
+.display {
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 20px;
-    
+    background: linear-gradient(to bottom, rgba(161, 59, 148, 0.5), rgba(16, 44, 77, 0.6));
+
 }
-.quote-text {
-    font-size: 5rem;
-    font-style: italic;
-    color:antiquewhite;
-}
-.author-text {
-    flex-basis: 100%;
-    font-size: 3rem;
-    font-style: bold;
-    color:antiquewhite;
-}
+
 .background-img {
     position: absolute;
     top: 0;
@@ -37,4 +24,34 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.quote-container {
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    border: 2px solid white;
+    padding: 5%;
+    margin:5%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.quote-text {
+    display: block;
+    font-style: italic;
+}
+
+.author-text {
+    font-size: 1rem;
+    font-style: italic;
 }
