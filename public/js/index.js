@@ -8,6 +8,24 @@ const elements = {
 const quoteElement = document.getElementById("quote");
 const authorElement = document.getElementById("author");
 
+
+
+async function getRandomImage() {
+    const client_id = "RWFLtaG8UImX6eRSCvmoWBRnpeTkziCAWjpKOBJhMGk";
+    const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+    try {
+        const response = await fetch(endpoint);
+        const returnedData = await response.json();
+        const receivedPhotoUrl = returnedData.urls.regular;
+
+        const imgDiv = document.querySelector(".background-img");
+        imgDiv.style.backgroundImage = `url("${receivedPhotoUrl}")`;
+    } catch (error) {
+        console.error(error);
+    }
+}
+getRandomImage();
+
 /*const quotes = [
     {
         quote: "All hands! Abandon ship!",
@@ -40,18 +58,3 @@ function loopThroughQuotes() {
 
 setTimeout(loopThroughQuotes, 3000); */
 
-async function getRandomImage() {
-    const client_id = "";
-    const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
-    try {
-        const response = await fetch(endpoint);
-        const returnedData = await response.json();
-        const receivedPhotoUrl = returnedData.urls.regular;
-
-        const imgDiv = document.querySelector(".background-img");
-        imgDiv.style.backgroundImage = `url("${receivedPhotoUrl}")`;
-    } catch (error) {
-        console.error(error);
-    }
-}
-getRandomImage();
